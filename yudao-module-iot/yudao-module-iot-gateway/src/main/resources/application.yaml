@@ -7,10 +7,10 @@ spring:
   # Redis 配置
   data:
     redis:
-      host: 127.0.0.1 # Redis 服务器地址
+      host: 192.168.101.100 # Redis 服务器地址（Nacos 命名空间内的公共 Redis）
       port: 6379 # Redis 服务器端口
       database: 0 # Redis 数据库索引
-      # password: # Redis 密码，如果有的话
+      password: admin@1234 # Redis 密码
       timeout: 5000ms # 命令超时时间：Redis 不可用时，离线暂存的直发最多等待该时间后写入暂存（需大于消费 Stream 的阻塞读取时间 2 秒）
       connect-timeout: 5000ms # 连接超时时间
   # Kafka 配置项，对应 KafkaProperties 配置类
@@ -55,7 +55,7 @@ yudao:
     gateway:
       # 设备 RPC 配置
       rpc:
-        url: http://127.0.0.1:48091 # 主程序 API 地址
+        url: http://127.0.0.1:19426 # 主程序 API 地址
         connect-timeout: 30s
         read-timeout: 30s
       # 设备 Token 配置
