@@ -67,6 +67,12 @@
             <artifactId>yudao-spring-boot-starter-mybatis</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+
         <!-- RPC 远程调用相关 -->
         <dependency>
             <groupId>cn.iocoder.cloud</groupId>
