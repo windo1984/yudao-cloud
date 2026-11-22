@@ -1,0 +1,30 @@
+server:
+  port: 19414
+
+spring:
+  application:
+    name: trade-server
+
+  config:
+    import:
+      - optional:nacos:yudao-springdoc.yaml
+      - optional:nacos:cache-redis.yml
+      - optional:nacos:yudao-ds-trade-pgsql.yaml # 加载【Nacos】的配置
+      - optional:nacos:yudao-trade-application.yaml # 加载【Nacos】的配置
+
+--- # nacos 配置
+spring:
+  cloud:
+    nacos:
+      # nacos 服务地址
+      server-addr: 192.168.101.100:38848
+      username: nacos
+      password: nacos
+      discovery:
+        # 注册组
+        group: DEFAULT_GROUP
+        namespace: fighter-cloud
+      config:
+        # 配置组
+        group: DEFAULT_GROUP
+        namespace: fighter-cloud

@@ -63,6 +63,10 @@
             <groupId>cn.iocoder.cloud</groupId>
             <artifactId>yudao-spring-boot-starter-redis</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId> <!-- QuestDB 通过 PGWire 访问 -->
+        </dependency>
 
         <!-- RPC 远程调用相关 -->
         <dependency>

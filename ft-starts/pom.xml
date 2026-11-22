@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>cn.iocoder.cloud</groupId>
@@ -10,9 +10,37 @@
     </parent>
 
     <artifactId>ft-starts</artifactId>
+    <version>${revision}</version>
     <packaging>pom</packaging>
+
+    <!-- 本聚合 pom 自带版本属性，保证从 ft-starts 单独构建时 revision 属性也能解析 -->
+    <properties>
+        <revision>2026.10-jdk25-SNAPSHOT</revision>
+        <spring.boot.version>4.1.2</spring.boot.version>
+    </properties>
     <modules>
         <module>ft-start-system</module>
+        <module>ft-start-infra</module>
+        <module>ft-start-ai</module>
+        <module>ft-start-bpm</module>
+        <module>ft-start-crm</module>
+        <module>ft-start-erp</module>
+        <module>ft-start-fms</module>
+        <module>ft-start-hrm</module>
+        <module>ft-start-im</module>
+        <module>ft-start-iot</module>
+        <module>ft-start-member</module>
+        <module>ft-start-mes</module>
+        <module>ft-start-mp</module>
+        <module>ft-start-oa</module>
+        <module>ft-start-pay</module>
+        <module>ft-start-pms</module>
+        <module>ft-start-product</module>
+        <module>ft-start-promotion</module>
+        <module>ft-start-report</module>
+        <module>ft-start-statistics</module>
+        <module>ft-start-trade</module>
+        <module>ft-start-wms</module>
     </modules>
 
 </project>

@@ -1,0 +1,32 @@
+server:
+  port: 19402
+
+spring:
+  application:
+    name: infra-server
+
+  config:
+    import:
+      - optional:nacos:yudao-springdoc.yaml
+      - optional:nacos:cache-redis.yml
+      - optional:nacos:yudao-ds-infra-pgsql.yaml # 加载【Nacos】的配置
+      - optional:nacos:yudao-infra-application.yaml # 加载【Nacos】的配置
+
+--- # nacos 配置
+spring:
+  cloud:
+    nacos:
+      # nacos 服务地址
+      server-addr: 192.168.101.100:38848
+      username: nacos
+      password: nacos
+      discovery:
+        # 注册组
+        group: DEFAULT_GROUP
+        namespace: fighter-cloud
+        metadata:
+          version: 1.0.0 # 服务实例的版本号，可用于灰度发布
+      config:
+        # 配置组
+        group: DEFAULT_GROUP
+        namespace: fighter-cloud
