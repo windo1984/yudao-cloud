@@ -20,6 +20,7 @@
     </properties>
     <modules>
         <module>ft-start-system</module>
+        <module>ft-start-all</module>
         <module>ft-start-infra</module>
         <module>ft-start-ai</module>
         <module>ft-start-bpm</module>
